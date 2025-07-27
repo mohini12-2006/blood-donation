@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1>Login</h1></header>
+  <nav>
+  
+  <a href="index.html">Home</a>
+  <a href="register.html">Register</a>
+  <a href="search.html">Search</a>
+  <a href="request.html">Request</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+  <a href="login.html">Login</a>
+</nav>
+  <section>
+    <form onsubmit="loginUser(event)">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button class="btn" type="submit">Login</button>
+      <p id="loginMsg"></p>
+    </form>
+  </section>
+  <footer>&copy; 2025 Blood Donation Portal</footer>
+  <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>blood donation official page</title>
+</head>
+<body>
+<script>
+    document.getElementById('donorForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const bloodGroup = document.getElementById('bloodGroup').value;
+      const message = document.getElementById('message');
+
+      if (!name || !email || !phone || !bloodGroup) {
+        message.textContent = "Please fill in all the fields.";
+        message.className = "message error";
+        return;
+      }
+
+      message.textContent = Thank you, ${name}. You have successfully registered as a ${bloodGroup} blood donor.;
+      message.className = "message success";
+
+      document.getElementById('donorForm').reset();
+    });
+  </script>
+
+</body>
+</html>
